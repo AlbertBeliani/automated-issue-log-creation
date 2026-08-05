@@ -1,0 +1,8 @@
+# Contains session cookies / auth headers captured for debugging - never commit.
+curl-and-selectors.txt
+
+# Untracked scratch/reference files not part of the tool itself.
+broken-link.txt
+wymiana.txt
+Photos/
+code/
