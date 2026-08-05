@@ -26,8 +26,16 @@
       issue_priority: '0',
       restricted_access: '0',
       board_id: '24',
+      // board_column_id is overwritten per run based on the chosen predefined issue below.
       board_column_id: '412',
     },
+
+    // The "Predefined issue" dropdown only changes board_column_id - tag, board, and
+    // everything else stay identical regardless of which one is picked.
+    PREDEFINED_ISSUES: [
+      { id: '1535626', label: '1535626: DIMENSIONS PRE-CHECK ATS/DECO', board_column_id: '412' },
+      { id: '1535622', label: '1535622: DIMENSIONS PRE-CHECK', board_column_id: '383' },
+    ],
 
     articleUrlTemplate: (articleId) =>
       `https://www.prologistics.info/article.php?original_article_id=${articleId}`,
@@ -216,6 +224,20 @@
     return matches.length ? matches.map((r) => `  - ${r.key}`).join('\n') : '  (none)';
   }
 
+  function choosePredefinedIssue() {
+    const options = CONFIG.PREDEFINED_ISSUES;
+    const listText = options.map((o, i) => `${i + 1}) ${o.label}`).join('\n');
+    const input = prompt(`Which predefined issue should this batch use?\n\n${listText}`, '1');
+    if (input === null) return null; // cancelled
+
+    const idx = parseInt(input.trim(), 10) - 1;
+    if (Number.isNaN(idx) || idx < 0 || idx >= options.length) {
+      alert(`"${input}" is not a valid choice - expected 1 or 2. Click the bookmark again to retry.`);
+      return null;
+    }
+    return options[idx];
+  }
+
   // ---- Guided flow: runs automatically each time the bookmarklet is clicked ----
   async function guidedFlow() {
     const found = scanOrders();
@@ -223,6 +245,10 @@
       alert('No unprocessed orders with missing dimensions found on this page.');
       return;
     }
+
+    const chosenIssue = choosePredefinedIssue();
+    if (!chosenIssue) return;
+    CONFIG.FIXED_FIELDS.board_column_id = chosenIssue.board_column_id;
 
     const limitInput = prompt(
       `Found ${found.length} order(s) with missing dimensions.\n\nHow many should be processed this run? (leave blank for all ${found.length})`,
@@ -242,6 +268,7 @@
     const noButton = dryResults.filter((r) => r.status === 'no-button');
 
     let preview = `DRY RUN - nothing has been created yet.\n\n`;
+    preview += `Predefined issue: ${chosenIssue.label}\n\n`;
     preview += `Will create issue logs for ${willCreate.length} order(s):\n${listOrders(dryResults, 'would-create')}`;
     preview += `\n\nAlready logged, will be skipped: ${alreadyLogged.length} order(s)`;
     if (noButton.length) {
@@ -270,6 +297,7 @@
     const errored = liveResults.filter((r) => r.status === 'error');
 
     let summary = `LIVE RUN COMPLETE\n\n`;
+    summary += `Predefined issue: ${chosenIssue.label}\n\n`;
     summary += `Created issue logs for ${created.length} order(s):\n${listOrders(liveResults, 'created')}`;
     if (errored.length) {
       summary += `\n\n${errored.length} order(s) FAILED - please check these manually:\n`;
