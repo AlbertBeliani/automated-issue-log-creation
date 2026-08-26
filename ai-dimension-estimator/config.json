@@ -1,0 +1,12 @@
+{
+  "queue_urls": [
+    "https://www.prologistics.info/search.php?seller_name=&what=shipping_username&shipping_username=ATSDecoOther&numDaysDue=&more_less_days_due=all&numDaysAssigned=&more_less_days_assigned=all&shipping_mode=-1&shipmindate=&shipmaxdate=&deleted=&route_id=-2&routes_responsible_uname=&route_date_from=&route_date_to=&ina_route_id=0&route_unassigned=1&gmap_bonus=&gmap_confirm=&gmap_task=&gmap_date=&timestamp=&timestamp_username=&exported=&exported_format=&exported_mindate=&exported_maxdate=&open_amount=&wwo=0&pl=0&country_shipping=0&article_id=&repack=3&packed_status=3&released=&auftrag_kind=&boxes_number=0&limit=999999&recalc_distances=0&layout=2"
+  ],
+
+  "test_article_ids": ["1868905"],
+
+  "ui_fill": {
+    "predefined_issue_search_text": "AI Dimension estimate",
+    "responsible_search_text": "Albert Linnert"
+  }
+}

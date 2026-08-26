@@ -1,0 +1,120 @@
+{
+  "_readme": "Fill in every REPLACE_ME below before running. queue_url is the filtered search.php URL for that market/order-type (same idea as the single-market bookmarklet's usage URL). board_id/board_column_id/department_id/responsible_id are per-market issue-tracker settings and are NOT guessable - see README.md 'Finding the per-market field values' for how to look them up. Set an order_type to null (not an object) if that market doesn't use it.",
+
+  "markets": [
+    {
+      "name": "DE/AT/FR",
+      "order_types": {
+        "standard": {
+          "queue_url": "https://www.prologistics.info/search.php?days1=&ppp_not_booked_solved=0&ebay_shp_days=&days3=&days8=&days5=&calc_listing_fee_dn=&listingfees_open_days=&number=&ff_number=&email=&buyer_name=&company=&name=&street=&zip=&city=&tel=&seller_name=&invoice_number=&offer_id=&galleryURL=&shipping_country=PB&shipping_country_seller=&shipping_country_from=YYYY-MM-DD&shipping_country_to=YYYY-MM-DD&tracking_number=&label_number=&deleted_uname=&payment_comment=&open_amount_mode=any&open_amount_from=&open_amount_to=&open_amount_currency=&direct_offer_id=&fix_number=&what=shipping_username&shipping_username=Buchhaltung&shipping_order_country=&shipping_order_username=&shipping_order_warehouse=&sold_price_seller_name=&sold_price=&sold_price_currency=CHF&unshipped_bonus_country=AT&status%5B%5D=ticket_opened&status%5B%5D=uncompleted&status%5B%5D=unpaid&status%5B%5D=paidNOTassigned&status%5B%5D=ready_to_ship&status%5B%5D=ins&status_username=&source_seller=0&comment=&comment_src=&alarm_mode=Pending&alarm_username=",
+          "board_id": "24",
+          "board_column_id": "383",
+          "department_id": "211",
+          "responsible_id": "WeArcisz"
+        },
+        "ats_deco": {
+          "queue_url": "https://www.prologistics.info/search.php?seller_name=&what=shipping_username&shipping_username=ATSDeco&filter_id=54bc20cb6b66f27338603c90d7835d11&numDaysDue=&more_less_days_due=all&numDaysAssigned=&more_less_days_assigned=all&shipping_mode=-1&shipmindate=&shipmaxdate=&deleted=&route_id=-2&routes_responsible_uname=&route_date_from=&route_date_to=&ina_route_id=0&drivers_number=all&route_unassigned=1&gmap_bonus=&gmap_confirm=&gmap_task=&gmap_date=&timestamp=&timestamp_username=&exported=&exported_format=&exported_mindate=&exported_maxdate=&open_amount=&wwo=0&exclude_wwo_dest_warehouse=0&pl=0&country_shipping=0&auftrags_without_decompleted=0&article_id=&sellers_show_mode=0&filter_payments_methods_mode=all&filter_packing_options%5B%5D=0&repack=3&packed_status=3&released=&auftrag_kind=&boxes_number=0&limit=999999&filter_warehouse_type=one&filter_warehouses%5B%5D=&filter_remote_packing=0&filter_shipping_method=&recalc_distances=0&layout=2",
+          "board_id": "24",
+          "board_column_id": "412",
+          "department_id": "211",
+          "responsible_id": "WeArcisz"
+        }
+      }
+    },
+    {
+      "name": "NL",
+      "order_types": {
+        "standard": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        },
+        "ats_deco": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        }
+      }
+    },
+    {
+      "name": "OTHER",
+      "order_types": {
+        "standard": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        },
+        "ats_deco": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        }
+      }
+    },
+    {
+      "name": "UK",
+      "order_types": {
+        "standard": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        },
+        "ats_deco": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        }
+      }
+    },
+    {
+      "name": "CH",
+      "order_types": {
+        "standard": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        },
+        "ats_deco": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        }
+      }
+    },
+    {
+      "name": "PL",
+      "order_types": {
+        "standard": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        },
+        "ats_deco": {
+          "queue_url": "null",
+          "board_id": "null",
+          "board_column_id": "null",
+          "department_id": "null",
+          "responsible_id": "null"
+        }
+      }
+    }
+  ]
+}
