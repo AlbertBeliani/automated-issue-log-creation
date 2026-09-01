@@ -12,9 +12,3 @@ code/
 multi-market/browser-profile/
 multi-market/logs/
 multi-market/__pycache__/
-
-# ai-dimension-estimator: API key, live browser session, per-run logs.
-ai-dimension-estimator/.env
-ai-dimension-estimator/browser-profile/
-ai-dimension-estimator/logs/
-ai-dimension-estimator/__pycache__/
